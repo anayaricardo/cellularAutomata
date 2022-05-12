@@ -19,7 +19,7 @@ class CellularAutomata {
 
     next(){
         this.print();
-        this.evaluate();
+        this.evaluate();op
     }
     print(){
         this.ctx.clearRect(0,0, this.size, this.size);

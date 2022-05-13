@@ -1,6 +1,6 @@
 # __Autómata celular__
 
-<p align="left">
+<p align="center">
   <img height="300" src="./img/cellularAutomata.gif" />
 </p>
 
@@ -98,8 +98,8 @@ El AC no trivial más simple consiste en una retícula unidimensional de célula
 
 Consideremos el AC definido por la tabla siguiente, que nos da la regla de evolución: 
 
-<p align="left">
-  <img height="150" src="./img/reglaDeEvolucion.png" />
+<p align="center">
+  <img height="100" src="./img/reglaDeEvolucion.png" />
 </p>
 
 ## Referencias
@@ -110,8 +110,8 @@ Consideremos el AC definido por la tabla siguiente, que nos da la regla de evolu
 
 ## Anexo
 
-<p align="left">
-  <img height="300" src="./img/cellularAutomata.png" />
+<p align="center">
+  <img height="500" src="./img/cellularAutomata.png" />
 </p>
 
 

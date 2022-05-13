@@ -1,7 +1,7 @@
 # __Autómata celular__
 
 <p align="left">
-  <img height="150" src="./cellularAutomata.gif" />
+  <img height="300" src="./img/cellularAutomata.gif" />
 </p>
 
 Un autómata celular (A.C.) es un __modelo matemático__ y __computacional__ para un __sistema dinámico__ que evoluciona en pasos __discretos__. Es adecuado para modelar sistemas naturales que puedan ser descritos como una colección masiva de objetos simples que __interactúen__ localmente unos con otros.
@@ -99,7 +99,7 @@ El AC no trivial más simple consiste en una retícula unidimensional de célula
 Consideremos el AC definido por la tabla siguiente, que nos da la regla de evolución: 
 
 <p align="left">
-  <img height="150" src="./reglaDeEvolucion.png" />
+  <img height="150" src="./img/reglaDeEvolucion.png" />
 </p>
 
 ## Referencias
@@ -107,5 +107,11 @@ Consideremos el AC definido por la tabla siguiente, que nos da la regla de evolu
      1. von Neumann, J. (1966)The Theory of Self-reproducing Automata, ed. Univ. of Illinois Press, Urbana, IL
      2. Gardner, M. (1970) Mathematical Games: The fantastic combinations of John Conway's new solitaire game "Life", Scientific American
      3. Wolfram (1986), Theory and Application of Cellular Automata, World Scientific, Singapur
+
+## Anexo
+
+<p align="left">
+  <img height="300" src="./img/cellularAutomata.png" />
+</p>
 
 

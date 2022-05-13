@@ -56,11 +56,11 @@ La primera etapa la inicia von Neumann,​ quien una vez terminada su participac
 
 En __1970, John Horton Conway__ dio a conocer el autómata celular que probablemente sea el más conocido: __el Juego de la vida__ (*Life*), publicado por __Martin Gardner__ en su columna *Mathematical Games* en la revista __Scientific American__.​ *Life* ocupa una cuadrícula (lattice bidimensional) donde se coloca al inicio un patrón de células "vivas" o "muertas". La vecindad para cada célula son ocho: los vecinos formados por la vecindad de Von Neumann y las cuatro células de las dos diagonales (esta vecindad se conoce como __vecindad de Moore__). De manera repetida, se aplican simultáneamente sobre todas las células de la cuadrícula las siguientes 3 reglas:
 
-    1. *Nacimiento*: se reemplaza una célula muerta por una viva si dicha célula tiene exactamente 3 vecinos vivos.
+1. *Nacimiento*: se reemplaza una célula muerta por una viva si dicha célula tiene exactamente 3 vecinos vivos.
 
-    2. *Muerte*: se reemplaza una célula viva por una muerta si dicha célula no tiene más de 1 vecino vivo (muerte por aislamiento) o si tiene más de 3 vecinos vivos (muerte por sobrepoblación).
-
-    3. *Supervivencia*: una célula viva permanecerá en ese estado si tiene 2 o 3 vecinos vivos.
+2. *Muerte*: se reemplaza una célula viva por una muerta si dicha célula no tiene más de 1 vecino vivo (muerte por aislamiento) o si tiene más de 3 vecinos vivos (muerte por sobrepoblación).
+  
+3. *Supervivencia*: una célula viva permanecerá en ese estado si tiene 2 o 3 vecinos vivos.
 
 
 Una de las características más importantes de *Life* es su capacidad de realizar __cómputo universal__, es decir, que con una distribución inicial apropiada de células vivas y muertas, *Life* se puede convertir en una computadora de propósito general (__máquina de Turing__). 

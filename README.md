@@ -11,7 +11,7 @@ Son sistemas descubiertos dentro del campo de la __`física computacional`__ por
 Aunque John von Neumann puso en práctica los AA.CC., estos fueron concebidos en los años 40 por __`Konrad Zuse`__ y __`Stanislaw Ulam`__. Zuse pensó en los “espacios de cómputo” (computing spaces), como modelos discretos de sistemas físicos. Las contribuciones de Ulam vinieron al final de los 40, poco después de haber inventado con __`Nicholas Metropolis`__ el __`Método de Montecarlo`__. 
 
 ## Descripción
-___
+
 No existe una definición formal y __`matemática`__ aceptada de autómata celular; sin embargo, se puede describir a un A.C. como una __`tupla`__, es decir, un conjunto ordenado de objetos caracterizado por los siguientes componentes: 
 
 - Una *rejilla* o *cuadriculado* (__`lattice`__) de enteros (conjunto __*Z*__) infinitamente extendida, y con *dimensión* ***d ∈ Z+***. Cada celda de la cuadrícula se conoce como __`célula`__.
@@ -39,7 +39,7 @@ Por ejemplo, un A.C. estándar tiene una cuadrícula donde se asume que las cél
 También puede variarse el conjunto de estados __*k*__ que cada célula puede tomar, la función de transición __*f*__ de forma que ya no sea homogénea, utilizar elementos estocásticos (aleatoriedad) en __*f*__ (lo que se conoce como A.C. *probabilístico*), variar las vecindades de cada célula, etc. 
 
 ## Historia
-____
+
 La historia de los autómatas celulares puede ser clasificada en tres etapas asociadas a los nombres de los científicos que en cada momento marcaron un punto de inflexión en el desarrollo de la teoría: la era de Von Neumann, la era de John Horton Conway y la era de Stephen Wolfram. 
 
 ## __Era de Von Neumann__
@@ -69,7 +69,7 @@ De esta manera, Wolfram clasificó el comportamiento cualitativo de los A.C. uni
 * __`Clase IV`__. La evolución lleva a estructuras aisladas que muestran un comportamiento __`complejo`__ (es decir, ni completamente caótico, ni completamente ordenado, sino en la línea entre uno y otro, este suele ser el tipo de comportamiento más interesante que un __`sistema dinámico`__ puede presentar).
 
 ## Aplicaciones
-____
+
 Los autómatas celulares pueden ser usados para modelar numerosos sistemas físicos que se caractericen por un gran número de componentes homogéneos y que interactúen localmente entre sí. De hecho, cualquier sistema real al que se le puedan analogar los conceptos de "vecindad", "estados de los componentes" y "función de transición" es candidato para ser modelado por un A.C.
 
 Las características de los autómatas celulares harán que dichos modelos sean discretos en tiempo, espacio o ambos, dependiendo de la variante de la definición de A.C. que se use. Algunos ejemplos de áreas en donde se utilizan los autómatas celulares son: 
@@ -80,7 +80,6 @@ Las características de los autómatas celulares harán que dichos modelos sean 
 * Modelado de procesos de __`percolación`__.
 
 ## Ejemplos de autómatas celulares
-___
 
 ## __AC de una dimensión__
 
@@ -93,7 +92,7 @@ Consideremos el AC definido por la tabla siguiente, que nos da la regla de evolu
 </p>
 
 ## Referencias
-____
+
      1. von Neumann, J. (1966)The Theory of Self-reproducing Automata, ed. Univ. of Illinois Press, Urbana, IL
      2. Gardner, M. (1970) Mathematical Games: The fantastic combinations of John Conway's new solitaire game "Life", Scientific American
      3. Wolfram (1986), Theory and Application of Cellular Automata, World Scientific, Singapur

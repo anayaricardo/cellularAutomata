@@ -1,98 +1,83 @@
 class CellularAutomata {
+  constructor(size, ctx, cells) {
+    this.size = size;
+    this.ctx = ctx;
+    this.cells = cells ? cells : [];
+  }
 
-    constructor(size, ctx, cells){
-        this.size = size;
-        this.ctx = ctx;
-        this.cells = cells ? cells : [];
+  create() {
+    for (let x = 0; x < this.size; x++) {
+      let row = [];
+      for (let y = 0; y < this.size; y++) {
+        const alive = Math.random() < 0.5;
+        row.push(alive);
+      }
+      this.cells.push(row);
     }
+  }
 
-    create(){
-        for(let x=0; x<this.size; x++){
-            let row = [];
-            for(let y=0; y<this.size; y++){
-                const alive= Math.random()<0.5;
-                row.push(alive);
-            }
-            this.cells.push(row);
-        }
+  next() {
+    this.print();
+    this.evaluate();
+  }
+  print() {
+    this.ctx.clearRect(0, 0, this.size, this.size);
+    for (let x = 0; x < this.size; x++) {
+      for (let y = 0; y < this.size; y++) {
+        if (this.cells[x][y]) this.ctx.fillStyle = "darkolivegreen";
+        else this.ctx.fillStyle = "yellowgreen";
+        this.ctx.fillRect(x, y, 1, 1);
+      }
     }
+  }
 
-    next(){
-        this.print();
-        this.evaluate();
+  evaluate() {
+    let cellsAux = new Array(100)
+      .fill("")
+      .map(() => new Array(100).fill(false));
+
+    for (let x = 0; x < this.size; x++) {
+      for (let y = 0; y < this.size; y++) {
+        let livingNeighbor = 0;
+
+        //1
+        if (x > 0 && y > 0) if (this.cells[x - 1][y - 1]) livingNeighbor++;
+
+        //2
+        if (y > 0) if (this.cells[x][y - 1]) livingNeighbor++;
+
+        //3
+        if (x < this.size - 1 && y > 0)
+          if (this.cells[x + 1][y - 1]) livingNeighbor++;
+
+        //4
+        if (x > 0) if (this.cells[x - 1][y]) livingNeighbor++;
+
+        //5
+        if (x < this.size - 1) if (this.cells[x + 1][y]) livingNeighbor++;
+
+        //6
+        if (x > 0 && y < this.size - 1)
+          if (this.cells[x - 1][y + 1]) livingNeighbor++;
+
+        //7
+        if (y < this.size - 1) if (this.cells[x][y + 1]) livingNeighbor++;
+
+        //8
+        if (x < this.size - 1 && y < this.size - 1)
+          if (this.cells[x + 1][y + 1]) livingNeighbor++;
+
+        if (this.cells[x][y])
+          cellsAux[x][y] =
+            livingNeighbor == 2 || livingNeighbor == 3 ? true : false;
+        else cellsAux[x][y] = livingNeighbor == 3 ? true : false;
+      }
     }
-    print(){
-        this.ctx.clearRect(0,0, this.size, this.size);
-        for(let x=0; x<this.size; x++){
-            for(let y=0; y<this.size; y++){
-                if(this.cells[x][y])
-                this.ctx.fillStyle="darkolivegreen";
-                else
-                this.ctx.fillStyle="yellowgreen";
-                this.ctx.fillRect(x,y,1,1);
-            }
-        }
-    }
-
-    evaluate(){
-        let cellsAux = new Array(100).fill("").map(()=>new Array(100).fill(false));
-
-        for(let x=0; x<this.size; x++){
-            for(let y=0; y<this.size; y++){
-                let livingNeighbor = 0;
-
-                //1
-                if(x>0 && y>0)
-                if(this.cells[x-1][y-1])
-                livingNeighbor++;
-
-                //2
-                if(y>0)
-                if(this.cells[x][y-1])
-                livingNeighbor++;
-
-                //3
-                if(x<(this.size-1) && y>0)
-                if(this.cells[x+1][y-1])
-                livingNeighbor++;
-
-                //4
-                if(x>0)
-                if(this.cells[x-1][y])
-                livingNeighbor++;
-
-                //5
-                if(x<(this.size-1))
-                if(this.cells[x+1][y])
-                livingNeighbor++;
-
-                //6
-                if(x > 0 && y<(this.size-1))
-                if(this.cells[x-1][y+1])
-                livingNeighbor++;
-
-                //7
-                if(y<(this.size-1))
-                if(this.cells[x][y+1])
-                livingNeighbor++;
-
-                //8
-                if(x<(this.size-1) && y<(this.size-1))
-                if(this.cells[x+1][y+1])
-                livingNeighbor++;
-
-                if(this.cells[x][y])
-                cellsAux[x][y]= livingNeighbor == 2 ||
-                                livingNeighbor == 3 ? true : false;
-                else
-                cellsAux[x][y]= livingNeighbor == 3 ? true :false;
-            }
-        }
-        this.cells = cellsAux;
-    }
+    this.cells = cellsAux;
+  }
 }
 
-const cells = new Array(100).fill("").map(()=>new Array(100).fill(false));
+const cells = new Array(100).fill("").map(() => new Array(100).fill(false));
 
 //food
 cells[0][4] = true;
@@ -185,9 +170,8 @@ cells[35][3] = true;
 // cells[6][30] = true;
 // cells[7][30] = true;
 
-
 const ctx = canvas.getContext("2d");
 const cellularAutomata = new CellularAutomata(100, ctx, cells);
 cellularAutomata.create();
 cellularAutomata.print();
-setInterval(()=>cellularAutomata.next(), 100);
+setInterval(() => cellularAutomata.next(), 100);

@@ -1,0 +1,58 @@
+body {
+  /* width: 100%; */
+  height: 100vh;
+  background: linear-gradient(45deg, #0044ff, #172380, #0064a7, #01ff78);
+  background-size: 400% 400%;
+  position: relative;
+  animation: move 20s ease infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  letter-spacing: 7px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.canva {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+}

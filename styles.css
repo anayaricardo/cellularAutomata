@@ -4,7 +4,7 @@ body {
   background: linear-gradient(45deg, #0044ff, #174380, #0064a7, #01ff78);
   background-size: 400% 400%;
   position: relative;
-  animation: move 5s ease infinite;
+  animation: move 10s ease infinite;
 }
 
 @keyframes move {

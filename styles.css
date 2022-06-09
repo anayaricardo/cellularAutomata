@@ -50,6 +50,7 @@ h1 {
   margin: 0 auto;
   width: 300px;
   height: 300px;
+  margin-bottom: 20px;
 }
 
 #canvas {
@@ -59,7 +60,25 @@ h1 {
 
 p {
   max-width: 500px;
-  margin: 20 20 20 20;
+  margin: 0 auto;
+  font-size: 1rem;
+  text-align: left;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 4px #000000;
+  background: rgba(199, 199, 199, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 15px;
+  border-radius: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+ul {
+  max-width: 500px;
+  margin: 0 auto;
   font-size: 0.9rem;
   text-align: left;
   color: white;
@@ -72,14 +91,7 @@ p {
   border-radius: 10px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-}
-
-li {
-  font-size: 1rem;
-  text-align: left;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 2px 2px 4px #000000;
+  margin-bottom: 20px;
 }
 
 a {
@@ -89,11 +101,11 @@ a {
 }
 
 .footer {
-  height: 50px;
+  height: 30px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 2px 2px 4px #000000;
